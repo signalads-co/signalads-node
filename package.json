@@ -1,6 +1,6 @@
 {
   "name": "signalads-node",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Signal Ads Nodejs SDK",
   "main": "index.js",
   "scripts": {
