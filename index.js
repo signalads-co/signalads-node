@@ -26,7 +26,7 @@ exports.setApiKey = (key) => {
  * @param { string } receptor - target user phone number.
  */
 exports.sendSingleSms = async (sender, text, receptor) => {
-    const body = {sender, text: message, receptor}
+    const body = {sender, text, receptor}
     return await axios.get(endPoint + `/${apiKey}/send`, {params: body}).then(res => res.data).catch(err => err.response.data);
 }
 
