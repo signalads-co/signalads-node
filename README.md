@@ -1,56 +1,161 @@
-Signal Ads Node SDK
----------------------
+## Signal Ads Node SDK
 
-Usage
----------------------
+## Usage
 
 - Send Single SMS
 
-`const signal = require('signalads-node')`
+```node
 
-`signal.setApiKey('your-api-key')`
+const signal = require('signalads-node')
 
-`await signal.sendSingleSms(sender, text, receptor)`
+signal.setApiKey('your-api-key')
+
+await signal.sendSingleSms(sender, text, receptor)
+
+```
+
+`Sample Output`
+
+```json
+
+{
+  "data": {
+    "message_id": "2bb0220b-...",
+    "price": 160
+  },
+  "message": "پیام شما با موفقیت در صف ارسال قرار گرفت",
+  "error": {
+    "message": null,
+    "errors": null
+  }
+}
+
+```
+
 
 - Send Multiple SMS With Same Text
 
-`const signal = require('signalads-node')`
+```node
 
-`signal.setApiKey('your-api-key')`
+const signal = require('signalads-node')
 
-`const receptors = ['09121234567']`
+signal.setApiKey('your-api-key')
 
-`await signal.sendMultipleSms(sender, text, receptors)`
+const receptors = ['09121234567']
 
+await signal.sendMultipleSms(sender, text, receptors)
+
+```
+
+`Sample Output`
+
+```json
+
+{
+  "data": {
+    "message_id": "755455f6-....",
+    "price": 160
+  },
+  "message": "پیام شما با موفقیت در صف ارسال قرار گرفت",
+  "error": {
+    "message": null,
+    "errors": null
+  }
+}
+
+```
 
 - Send Multiple SMS With Multiple Text
 
-`const signal = require('signalads-node')`
+```node
 
-`signal.setApiKey('your-api-key')`
+const signal = require('signalads-node')
 
-`const pairs = [{text: 'Hi', receptor: '09123456789'}]`
+signal.setApiKey('your-api-key')
 
-`await signal.sendPairToPairSms(sender, pairs)`
+const pairs = [{text: 'Hi', receptor: '09123456789'}]
 
+await signal.sendPairToPairSms(sender, pairs)
+
+```
+
+`Sample Output`
+
+```json
+
+{
+  "data": {
+    "message_id": "bb6100b3-....",
+    "price": 160
+  },
+  "message": "پیام شما با موفقیت در صف ارسال قرار گرفت",
+  "error": {
+    "message": null,
+    "errors": null
+  }
+}
+
+```
 
 - Send Sms With Pattern
 
-`const signal = require('signalads-node')`
+```node
 
-`signal.setApiKey('your-api-key')`
+const signal = require('signalads-node')
 
-`const patternParams = ['param1', 'param2', 'param3']`
+signal.setApiKey('your-api-key')
 
-`const receptors = ['09121234567']`
+const patternParams = ['param1', 'param2', 'param3']
 
-`await signal.sendMessageWithPattern(sender, patternId, patternParams, receptors)`
+const receptors = ['09121234567']
+
+await signal.sendMessageWithPattern(sender, patternId, patternParams, receptors)
+
+```
+
+`Sample Output`
+
+```json
+
+{
+  "data": {
+    "message_id": "bb6100b3-....",
+    "price": 160
+  },
+  "message": "پیام شما با موفقیت در صف ارسال قرار گرفت",
+  "error": {
+    "message": null,
+    "errors": null
+  }
+}
+
+```
 
 - Get account credit
 
-`const signal = require('signalads-node')`
+```node
 
-`signal.setApiKey('your-api-key')`
+const signal = require('signalads-node')
 
-`await signal.getAccountCredit()`
+signal.setApiKey('your-api-key')
 
+await signal.getAccountCredit()
+
+```
+
+`Sample Output`
+
+```json
+
+{
+  "data": {
+    "credit": "333946"
+  },
+  "message": null,
+  "error": {
+    "message": null,
+    "errors": null
+  }
+}
+
+```
