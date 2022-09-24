@@ -6,7 +6,7 @@ Usage
 
 - Send Single SMS
 
-`const signal = require('./index')`
+`const signal = require('signalads-node')`
 
 `signal.setApiKey('your-api-key')`
 
@@ -14,7 +14,7 @@ Usage
 
 - Send Multiple SMS With Same Text
 
-`const signal = require('./index')`
+`const signal = require('signalads-node')`
 
 `signal.setApiKey('your-api-key')`
 
@@ -25,7 +25,7 @@ Usage
 
 - Send Multiple SMS With Multiple Text
 
-`const signal = require('./index')`
+`const signal = require('signalads-node')`
 
 `signal.setApiKey('your-api-key')`
 
@@ -36,7 +36,7 @@ Usage
 
 - Send Sms With Pattern
 
-`const signal = require('./index')`
+`const signal = require('signalads-node')`
 
 `signal.setApiKey('your-api-key')`
 
@@ -48,7 +48,7 @@ Usage
 
 - Get account credit
 
-`const signal = require('./index')`
+`const signal = require('signalads-node')`
 
 `signal.setApiKey('your-api-key')`
 
