@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const endPoint = 'http://192.168.1.198:8000/api/v1';
+const endPoint = 'https://sms.signalads.com/api/v1';
 
 let apiKey = '';
 
