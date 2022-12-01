@@ -59,7 +59,7 @@ exports.sendPairToPairSms = async (sender, pairs) => {
  * @param { Array } receptors - list of target users phone number.
  */
 exports.sendMessageWithPattern = async (sender, patternId, patternParams, receptors) => {
-    const body = {sender, pattern_id: patternId, pattern_params: patternParams, receptors}
+    const body = {sender, pattern_id: patternId, pattern_params: patternParams, receptor: receptors}
     return await axios.post(endPoint + `/${apiKey}/withPattern`, body).then(res => res.data).catch(err => err.response.data);
 }
 
