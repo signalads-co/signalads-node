@@ -12,6 +12,13 @@ signal.setApiKey('your-api-key')
 
 await signal.sendSingleSms(sender, text, receptor)
 
+// typescript usage
+import { sendSingleSms, setApiKey } from 'signalads-node';
+
+setApiKey('your-api-key')
+
+await sendSingleSms(sender, text, receptor)
+
 ```
 
 `Sample Output`
@@ -45,6 +52,15 @@ const receptors = ['09121234567']
 
 await signal.sendMultipleSms(sender, text, receptors)
 
+// typescript usage
+import { sendMultipleSms, setApiKey } from 'signalads-node';
+
+setApiKey('your-api-key')
+
+const receptors = ['09121234567']
+
+await sendMultipleSms(sender, text, receptors)
+
 ```
 
 `Sample Output`
@@ -76,6 +92,15 @@ signal.setApiKey('your-api-key')
 const pairs = [{text: 'Hi', receptor: '09123456789'}]
 
 await signal.sendPairToPairSms(sender, pairs)
+
+// typescript usage
+import { sendPairToPairSms, setApiKey } from 'signalads-node';
+
+setApiKey('your-api-key')
+
+const pairs = [{text: 'Hi', receptor: '09123456789'}]
+
+await sendPairToPairSms(sender, pairs)
 
 ```
 
@@ -111,6 +136,16 @@ const receptors = ['09121234567']
 
 await signal.sendMessageWithPattern(sender, patternId, patternParams, receptors)
 
+// typescript usage
+import { sendMessageWithPattern, setApiKey } from 'signalads-node';
+
+setApiKey('your-api-key')
+
+const patternParams = ['param1', 'param2', 'param3']
+
+const receptors = ['09121234567']
+
+await sendMessageWithPattern(sender, patternId, patternParams, receptors)
 ```
 
 `Sample Output`
@@ -140,6 +175,13 @@ const signal = require('signalads-node')
 signal.setApiKey('your-api-key')
 
 await signal.getAccountCredit()
+
+// typescript usage
+import { getAccountCredit, setApiKey } from 'signalads-node';
+
+setApiKey('your-api-key')
+
+await getAccountCredit()
 
 ```
 
